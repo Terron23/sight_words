@@ -4,18 +4,44 @@ import Speech from 'react-speech';
 
 class SightWords extends Component{
 
+handleVoices=()=>{
+    if(typeof speechSynthesis === 'undefined') {
+        return "No voices";
+      }
+    var voices = speechSynthesis.getVoices();
+  
+    for(let i = 0; i < voices.length ; i++) {
+      var option = document.createElement('option');
+      option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+      
+      if(voices[i].default) {
+        option.textContent += ' -- DEFAULT';
+      }
+  
+      option.setAttribute('data-lang', voices[i].lang);
+      option.setAttribute('data-name', voices[i].name);
+      document.getElementById("voiceSelect").appendChild(option);
+    }
+  
+
+}
 
 
-handleWords =()=>{
+handleWords =()=> {
     let arr = ["i", "a", "in", "be", "no", "he", "do", "go", "an", "is", "see", "can", "my", "to", "we", "and", 
     "the", "like", "she", "but", "play", "said", "get", "big", "our"];
 
     return arr.map(words=>{
         return (<div className="tcol col-md-3 tdiv">
-            <Speech styles={styles} text={words} 
+        <Speech 
+        styles={styles} 
+        text={words} 
+        pitch={1.4}
         lang="en-US" 
         rate="0.5"
-        voice="Google UK English Female" textAsButton={true}/>
+        voice="Fred" 
+        textAsButton={true}
+        />
         </div>)
     })
 }
@@ -25,6 +51,7 @@ handleWords =()=>{
   <hr />
 <div className="row text-center">
     {this.handleWords()}
+    {this.handleVoices}
 </div>
 </div>
   );

@@ -7,7 +7,7 @@ function Header() {
     <header className="masthead text-center text-white">
     <div className="masthead-content">
       <div className="container">
-        <h1 className="masthead-heading mb-0">Tori's Sight Word</h1>
+        <h1 className="masthead-heading mb-0">Tori's Sight Words</h1>
         <h2 className="masthead-subheading mb-0">Parent Directed Learning Plan</h2>
         <a href="#" className="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
       </div>
