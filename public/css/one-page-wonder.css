@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
  */
 
-body {
+ body {
   font-family: 'Lato';
 }
 
@@ -83,10 +83,7 @@ header.masthead .bg-circle {
   z-index: 0;
   position: absolute;
   border-radius: 100%;
-  background: linear-gradient(0deg, rgba(238,9,121, .3) 0%, rgba(255,106,.4), 100%);
-  /* background-image: url('../images/3-012_unicorn.png'); */
-
-
+  background: linear-gradient(0deg, #ee0979 0%, #ff6a00 100%);
 }
 
 header.masthead .bg-circle-1 {
@@ -137,7 +134,6 @@ header.masthead .bg-circle-4 {
 .btn-primary {
   background-color: #ee0979;
   border-color: #ee0979;
- 
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
